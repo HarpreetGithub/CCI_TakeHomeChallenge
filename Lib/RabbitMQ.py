@@ -1,6 +1,6 @@
 import pika
 
-class RabbitMQ_Lib(object):
+class RabbitMQ(object):
 
     """ Class for all the RabbitMQ actions/keywords"""
 
@@ -61,7 +61,7 @@ class RabbitMQ_Lib(object):
             }
 
         delivery_tag = delivery_data['delivery_tag']
-        
+
         # Acknowledge one or more messages. When sent by the client, 
         # this method acknowledges one or more messages delivered
         self.channel.basic_ack(delivery_tag=delivery_tag)
