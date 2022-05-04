@@ -10,7 +10,7 @@ Do a post request and validate the response code, response body, and response he
     Create Session  CCI_Test  http://api.shoutcloud.io
     &{header}=  Create Dictionary  Content-Type=application/json
     &{data}=  Create Dictionary  input=hello world
-    ${response}=  POST On Session  testsession  /V1/SHOUT  json=${data}  headers=${header}
+    ${response}=  POST On Session  CCI_Test  /V1/SHOUT  json=${data}  headers=${header}
     
     # Check the status as successful (200)
     Status Should Be  200  ${response} 
